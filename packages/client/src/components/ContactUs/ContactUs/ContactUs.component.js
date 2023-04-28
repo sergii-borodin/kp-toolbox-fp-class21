@@ -125,7 +125,7 @@ export const ContactUs = () => {
               <input
                 className="input-field"
                 type="email"
-                patter="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i"
+                pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i"
                 placeholder="e-mail"
                 value={formValues.email}
                 onChange={handleChange}
