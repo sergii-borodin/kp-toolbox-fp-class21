@@ -5,8 +5,8 @@
     "packages/*"
   ],
   "engines": {
-    "yarn": ">= 1.19.1",
-    "node": ">= 16.19.0"
+    "yarn": "1.19.1",
+    "node": "16.19.0"
   },
   "scripts": {
     "knex": "knex --cwd ./packages/server",
