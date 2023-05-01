@@ -4,10 +4,11 @@
  */
 exports.up = function (knex) {
   return knex.schema.createTable('tools_categories', (table) => {
+    table.increments();
     table.integer('tool_id').unsigned();
-    table.foreign('tool_id').references('id').inTable('tools');
+    // table.foreign('tool_id').references('id').inTable('tools');
     table.integer('category_id').unsigned();
-    table.foreign('category_id').references('id').inTable('categories');
+    // table.foreign('category_id').references('id').inTable('categories');
   });
 };
 
