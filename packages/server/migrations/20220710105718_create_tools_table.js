@@ -4,7 +4,7 @@
  */
 exports.up = function (knex) {
   return knex.schema.createTable('tools', (table) => {
-    table.increments('id');
+    table.increments();
     table.string('name').notNullable();
     table.integer('time_frame_min').notNullable(5);
     table.integer('time_frame_max');
@@ -17,6 +17,10 @@ exports.up = function (knex) {
     table.json('instructions');
     table.string('source');
     table.string('picture');
+    table
+      .dateTime('created_at')
+      .notNullable()
+      .defaultTo(knex.raw('CURRENT_TIMESTAMP'));
   });
 };
 
