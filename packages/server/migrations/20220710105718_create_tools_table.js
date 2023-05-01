@@ -17,7 +17,6 @@ exports.up = function (knex) {
     table.json('instructions');
     table.string('source');
     table.string('picture');
-    table.timestamp('created_at').defaultTo(knex.fn.now());
   });
 };
 
