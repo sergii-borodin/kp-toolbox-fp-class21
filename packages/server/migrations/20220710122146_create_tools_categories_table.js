@@ -3,12 +3,12 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable('tools_categories', (table) => {
+  return knex.schema.createTable('tool_categories', (table) => {
     table.increments();
-    // table.integer('tool_id').unsigned().references('tools.id');
-    // table.foreign('tool_id').references('id').inTable('tools');
-    // table.integer('category_id').unsigned().references('categories.id');
-    // table.foreign('category_id').references('id').inTable('categories');
+    table.integer('tool_id').unsigned().references('tools.id');
+    table.foreign('tool_id').references('id').inTable('tools');
+    table.integer('category_id').unsigned().references('categories.id');
+    table.foreign('category_id').references('id').inTable('categories');
   });
 };
 
